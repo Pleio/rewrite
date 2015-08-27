@@ -1,0 +1,14 @@
+{
+    "name": "pleio/rewrite",
+    "description": "Configure rewrite rules for arbitrary (available) URLs.",
+    "type": "elgg-plugin",
+    "keywords": ["elgg", "plugin", "rewrite"],
+    "license": "GPL-2.0",
+    "support": {
+        "source": "https://github.com/Pleio/rewrite",
+        "issues": "https://github.com/Pleio/rewrite/issues"
+    },
+    "require": {
+        "composer/installers": "^1.0.8"
+    }
+}
