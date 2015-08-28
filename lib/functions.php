@@ -10,7 +10,7 @@ function rewrite_get_path($path) {
     foreach ($rewrites as $rewrite) {
         if ($path == $rewrite['source']) {
             forward($rewrite['destination']);
-        } elseif (preg_match("/" . $rewrite['source'] . "/", $path, $source_groups)) {
+        } elseif (@preg_match("/" . $rewrite['source'] . "/", $path, $source_groups)) {
             if (preg_match("/{[0-9]*}/", $rewrite['destination'], $destination_groups)) {
 
                 $destination = $rewrite['destination'];
