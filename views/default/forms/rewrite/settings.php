@@ -7,12 +7,14 @@ echo "<div class=\"rewrite-row rewrite-head\">";
     echo "<div class=\"rewrite-cell\">" . elgg_echo("rewrite:destination") . "</div>";
 echo "</div>";
 
-foreach ($vars['rewrites'] as $i => $rewrite) {
+$i = 0;
+foreach ($vars['rewrites'] as $rewrite) {
     echo "<div class=\"rewrite-row\">";
 
     echo "<div class=\"rewrite-cell\">";
     echo elgg_view('input/text', array(
         'name' => 'rewrites[' . $i . '][source]',
+        'data-source' => true,
         'value' => $rewrite['source']
     ));
     echo "</div>";
@@ -20,6 +22,7 @@ foreach ($vars['rewrites'] as $i => $rewrite) {
     echo "<div class=\"rewrite-cell\">";
     echo elgg_view('input/text', array(
         'name' => 'rewrites[' . $i . '][destination]',
+        'data-destination' => true,
         'value' => $rewrite['destination']
     ));
     echo "</div>";
@@ -33,6 +36,8 @@ foreach ($vars['rewrites'] as $i => $rewrite) {
     echo "</div>";
 
     echo "</div>";
+
+    $i++;
 }
 
 echo "</div>";
